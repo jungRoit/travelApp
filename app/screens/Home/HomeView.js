@@ -1,60 +1,67 @@
 import React from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
-import styles from './styles';
-import HomeHeader from '../../components/HomeHeader';
-import Places from '../../components/places/Places';
-import boudha from '../../assets/img/boudha.jpeg';
-import patan from '../../assets/img/patan.jpeg';
-import basantapur from '../../assets/img/basantapur.jpeg';
-import chitwan from '../../assets/img/chitwan.jpeg';
+
+import Places from '../../components/Places/Places';
+
+import images from '../../config/images';
+
+const places = [
+  {
+    key: '1',
+    numberOfThings: 10,
+    title: 'Boudha',
+    image: images.boudha,
+    info: {
+      
+    }
+  },
+  {
+    key: '2',
+    numberOfThings: 21,
+    title: 'Chitwan',
+    image: images.chitwan
+  },
+  {
+    key: '3',
+    numberOfThings: 13,
+    title: 'Patan',
+    image: images.patan
+  },
+  {
+    key: '4',
+    numberOfThings: 8,
+    title: 'Basantapur',
+    image: images.basantapur
+  }
+]
 
 export default class HomeView extends React.Component {
-
-  placePressed = (place) => {
-    this.props.navigation.navigate('Info', {place: place});
+  constructor(props) {
+    super(props);
+    this.state = {
+      places: places || this.fetchData()
+    }
   }
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <View>
-          <FlatList
-            data= {[
-              {
-                key:'1',
-                nunberOfThings:10,
-                place:'Boudha',
-                image: boudha
-              },
-              {
-                key:'2',
-                nunberOfThings:21,
-                place:'Chitwan',
-                image: chitwan
-              },
-              {
-                key:'3',
-                nunberOfThings:13,
-                place:'Patan',
-                image: patan
-              },
-              {
-                key:'4',
-                nunberOfThings:8,
-                place:'Basantapur',
-                image: basantapur
-              }
-            ]}
-            renderItem = {({item}) => <Places 
-              numberOfThings={item.nunberOfThings} 
-              place={item.place}
-              image={item.image}
-              onPress = {this.placePressed}
-              />}
-          />
-        </View>
-       
+      <View>
+        <FlatList
+          data={this.state.places}
+          renderItem={({ item }) => <Places
+            place={item}
+            onPress={this.placePressed}
+          />}
+        />
       </View>
     )
   }
+
+  placePressed = (place) => {
+    this.props.navigation.navigate('Info', { place: place });
+  }
+  fetchData = () => {
+
+  }
+
 }

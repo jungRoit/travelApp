@@ -9,8 +9,10 @@ const styles = StyleSheet.create({
   heartBox: {
     flex:1,
     alignSelf: 'flex-end',
-    width: 50,
-    height: 50
+    width: 30,
+    height: 30,
+    marginTop: 20,
+    marginRight:10
   },
   contentBox: {
     flex:3,

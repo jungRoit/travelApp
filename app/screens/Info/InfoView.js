@@ -6,7 +6,7 @@ export default class InfoView extends React.Component {
   render() {
     return (
       <View>
-        <Text>Info of {this.props.navigation.getParam('place')}</Text>
+        <Text>Info of {this.props.navigation.getParam('place').title}</Text>
       </View>
     )
   }

@@ -1,8 +1,9 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
+
 import styles from './styles';
-import menuPic from '../../assets/img/menu.png';
-import searchPic from '../../assets/img/search.png';
+
+import images from '../../config/images';
 
 export default class HomeHeader extends React.Component {
   
@@ -11,7 +12,7 @@ export default class HomeHeader extends React.Component {
       <View style={styles.header}>
 
       <View style={styles.menuBox}>
-        <Image style={styles.menuIcon} source={menuPic} />
+        <Image style={styles.menuIcon} source={images.menu} />
       </View>
 
       <View style={styles.titleBox}>
@@ -19,7 +20,7 @@ export default class HomeHeader extends React.Component {
       </View>
 
       <View style={styles.searchBox}>
-        <Image style={styles.menuIcon} source={searchPic} />
+        <Image style={styles.menuIcon} source={images.search} />
       </View>
 
     </View>

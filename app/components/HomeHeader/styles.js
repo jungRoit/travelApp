@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   header: {
-    height: 90,
+    height: 70,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   menuBox: {
     justifyContent:'center',
     alignItems: 'center',
-    height:'50%',
+    height:'80%',
     width:'20%'
   },
   menuIcon: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   searchBox: {
     justifyContent:'center',
     alignItems: 'center',
-    height:50,
+    height:'90%',
     width:50,
     paddingBottom: 4
   }

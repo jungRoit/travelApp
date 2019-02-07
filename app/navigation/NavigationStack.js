@@ -1,7 +1,9 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import React from 'react';
+
 import HomeView from '../screens/Home';
 import InfoView from '../screens/Info';
+
 import HomeHeader from '../components/HomeHeader';
 
 
