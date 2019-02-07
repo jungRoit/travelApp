@@ -5,17 +5,13 @@ import HomeView from '../screens/Home';
 import InfoView from '../screens/Info';
 
 import HomeHeader from '../components/HomeHeader';
+import InfoHeader from '../components/InfoHeader/InfoHeader';
 
 
 const Navigator = createStackNavigator({
   Home: {
     screen: HomeView,
-    navigationOptions: {
-      header: props => <HomeHeader {...props} />,
-      headerStyle: {
-        backgroundColor: "transparent"
-      }
-    }
+    
   },
   Info: {
     screen: InfoView,

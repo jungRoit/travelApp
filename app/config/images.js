@@ -7,6 +7,7 @@ const images = {
   heartActive: require('../assets/img/heart-active.png'),
   menu: require('../assets/img/menu.png'),
   search: require('../assets/img/search.png'),
+  roadhouse: require('../assets/img/roadhouse.jpg'),
 }
 
 export default images;
