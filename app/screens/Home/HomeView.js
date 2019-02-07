@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
 import styles from './styles';
-import menuPic from '../../assets/img/menu.png';
-import searchPic from '../../assets/img/search.png';
+import HomeHeader from '../../components/HomeHeader';
 import Places from '../../components/places/Places';
 import boudha from '../../assets/img/boudha.jpeg';
 import patan from '../../assets/img/patan.jpeg';
@@ -18,22 +17,7 @@ export default class HomeView extends React.Component {
   render() {
     return (
       <View style={{flex:1}}>
-        <View style={styles.header}>
-
-          <View style={styles.menuBox}>
-            <Image style={styles.menuIcon} source={menuPic} />
-          </View>
-
-          <View style={styles.titleBox}>
-            <Text style={styles.title}>Discover</Text>
-          </View>
-
-          <View style={styles.searchBox}>
-            <Image style={styles.menuIcon} source={searchPic} />
-          </View>
-
-        </View>
-        <View style={{flex:6}}>
+        <View>
           <FlatList
             data= {[
               {
