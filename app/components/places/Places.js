@@ -18,25 +18,33 @@ export default class Places extends React.Component {
 
   render() {
     return (
-      <View style={{borderBottomWidth: 2,borderColor: 'white'}}>
-        <ImageBackground source={this.props.image} style={styles.backgroundImage}>
-          <TouchableWithoutFeedback onPress={this.toggleHeart}>
-            <ImageBackground
-              source={(this.state.isLoved) ? heartActivePic : heartPic}
-              style={styles.heartBox} />
-          </TouchableWithoutFeedback>
-          <View style={styles.contentBox}>
-            <View style={styles.numberBox}>
-              <Text style={styles.number}>{this.props.numberOfThings}</Text>
-            </View>
-            <View style={styles.textBox}>
-              <Text style={styles.subText}>Things to do in</Text>
-              <Text style={styles.placeTitle}>{this.props.place}</Text>
-            </View>
 
-          </View>
-        </ImageBackground>
+      <View style={{ borderBottomWidth: 2, borderColor: 'white' }}>
+        <TouchableWithoutFeedback
+          onPress={alert('pressed')}
+        >
+          <ImageBackground
+            source={this.props.image}
+            style={styles.backgroundImage}>
+            <TouchableWithoutFeedback onPress={this.toggleHeart}>
+              <ImageBackground
+                source={(this.state.isLoved) ? heartActivePic : heartPic}
+                style={styles.heartBox} />
+            </TouchableWithoutFeedback>
+            <View style={styles.contentBox}>
+              <View style={styles.numberBox}>
+                <Text style={styles.number}>{this.props.numberOfThings}</Text>
+              </View>
+              <View style={styles.textBox}>
+                <Text style={styles.subText}>Things to do in</Text>
+                <Text style={styles.placeTitle}>{this.props.place}</Text>
+              </View>
+
+            </View>
+          </ImageBackground>
+        </TouchableWithoutFeedback>
       </View>
+
     )
   }
 }

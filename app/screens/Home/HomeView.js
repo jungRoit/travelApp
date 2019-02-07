@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, FlatList } from 'react-native';
 import styles from './styles';
 import menuPic from '../../assets/img/menu.png';
 import searchPic from '../../assets/img/search.png';
@@ -8,9 +8,9 @@ import boudha from '../../assets/img/boudha.jpeg';
 import patan from '../../assets/img/patan.jpeg';
 import basantapur from '../../assets/img/basantapur.jpeg';
 import chitwan from '../../assets/img/chitwan.jpeg';
+import {createStackNavigator} from 'react-navigation'
 
 export default class HomeView extends React.Component {
-
   render() {
     return (
       <View style={{flex:1}}>
@@ -30,27 +30,41 @@ export default class HomeView extends React.Component {
 
         </View>
         <View style={{flex:6}}>
-        <ScrollView style={{flexGrow:1}}>
-        <Places
-          numberOfThings = {10}
-          place = 'Boudha'
-          image = {boudha}
-        />
-        <Places
-          numberOfThings = {22}
-          place = 'Patan'
-          image = {patan}
-        /><Places
-        numberOfThings = {18}
-        place = 'Chitwan'
-        image = {chitwan}
-      /><Places
-      numberOfThings = {7}
-      place = 'Basantapur'
-      image = {basantapur}
-    />
-      
-        </ScrollView>
+          <FlatList
+            data= {[
+              {
+                id:1,
+                nunberOfThings:10,
+                place:'Boudha',
+                image: boudha
+              },
+              {
+                id:2,
+                nunberOfThings:21,
+                place:'Chitwan',
+                image: chitwan
+              },
+              {
+                id:3,
+                nunberOfThings:13,
+                place:'Patan',
+                image: patan
+              },
+              {
+                id:4,
+                nunberOfThings:8,
+                place:'Basantapur',
+                image: basantapur
+              }
+            ]}
+            renderItem = {({item}) => <Places 
+            key={item.id}
+              numberOfThings={item.nunberOfThings} 
+              place={item.place}
+              image={item.image}
+              // navigation={this.props.navigation}
+              />}
+          />
         </View>
        
       </View>
