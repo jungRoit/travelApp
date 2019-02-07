@@ -8,9 +8,13 @@ import boudha from '../../assets/img/boudha.jpeg';
 import patan from '../../assets/img/patan.jpeg';
 import basantapur from '../../assets/img/basantapur.jpeg';
 import chitwan from '../../assets/img/chitwan.jpeg';
-import {createStackNavigator} from 'react-navigation'
 
 export default class HomeView extends React.Component {
+
+  placePressed = (place) => {
+    this.props.navigation.navigate('Info', {place: place});
+  }
+
   render() {
     return (
       <View style={{flex:1}}>
@@ -33,36 +37,35 @@ export default class HomeView extends React.Component {
           <FlatList
             data= {[
               {
-                id:1,
+                key:'1',
                 nunberOfThings:10,
                 place:'Boudha',
                 image: boudha
               },
               {
-                id:2,
+                key:'2',
                 nunberOfThings:21,
                 place:'Chitwan',
                 image: chitwan
               },
               {
-                id:3,
+                key:'3',
                 nunberOfThings:13,
                 place:'Patan',
                 image: patan
               },
               {
-                id:4,
+                key:'4',
                 nunberOfThings:8,
                 place:'Basantapur',
                 image: basantapur
               }
             ]}
             renderItem = {({item}) => <Places 
-            key={item.id}
               numberOfThings={item.nunberOfThings} 
               place={item.place}
               image={item.image}
-              // navigation={this.props.navigation}
+              onPress = {this.placePressed}
               />}
           />
         </View>

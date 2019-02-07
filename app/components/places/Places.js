@@ -16,13 +16,16 @@ export default class Places extends React.Component {
     this.setState(prevState => ({ isLoved: !prevState.isLoved }));
   }
 
+  pressed = () => {
+    this.props.onPress(this.props.place);
+  }
+
   render() {
     return (
-
+      <TouchableWithoutFeedback
+      onPress= {() =>this.pressed()}
+    >
       <View style={{ borderBottomWidth: 2, borderColor: 'white' }}>
-        <TouchableWithoutFeedback
-          onPress={alert('pressed')}
-        >
           <ImageBackground
             source={this.props.image}
             style={styles.backgroundImage}>
@@ -42,8 +45,8 @@ export default class Places extends React.Component {
 
             </View>
           </ImageBackground>
-        </TouchableWithoutFeedback>
       </View>
+      </TouchableWithoutFeedback>
 
     )
   }
