@@ -25,7 +25,7 @@ export default class InfoView extends React.Component {
   render() {
     return (
       <View style={styles.wrapper}>
-        <Navbar />
+       
         <ScrollView style={styles.infoWrapper}>
           <View style={styles.infoBox}>
 
@@ -68,7 +68,7 @@ export default class InfoView extends React.Component {
 
           </View>
           <View style={styles.detailsBox}>
-            <Text>{this.props.navigation.getParam('place').info.details}</Text>
+            <Text style={styles.detailsText}>{this.props.navigation.getParam('place').info.details}</Text>
           </View>
         </ScrollView>
       </View>

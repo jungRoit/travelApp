@@ -32,7 +32,12 @@ const styles = StyleSheet.create({
   detailsBox: {
     width: '100%',
     height: 600,
-    backgroundColor: 'yellow'
+    paddingLeft: 10,
+    paddingRight: 10
+  },
+  detailsText: {
+    fontSize: 15,
+    textAlign: 'justify'
   }
 })
 export default styles;

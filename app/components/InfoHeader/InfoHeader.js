@@ -17,6 +17,7 @@ export default class InfoHeader extends React.Component {
 
   render() {
     return (
+      <View>
         <ImageBackground style={styles.backgroundImg} source={this.props.place.info.image}>
           <View style={styles.iconBox}>
             <Image style={styles.searchIcon} source={images.search} />
@@ -25,6 +26,8 @@ export default class InfoHeader extends React.Component {
             </TouchableWithoutFeedback>
           </View>
         </ImageBackground>
+         <Navbar />
+         </View>
     )
   }
 
