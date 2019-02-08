@@ -1,9 +1,11 @@
 import React from 'react';
-import { ImageBackground, View, Image, TouchableWithoutFeedback, Text, TouchableHighlight } from 'react-native';
+import { ImageBackground, View, Image, TouchableWithoutFeedback } from 'react-native';
 
 import styles from './styles';
 
 import images from '../../config/images';
+
+import Navbar from '../../components/Navbar';
 
 
 
@@ -26,8 +28,8 @@ export default class InfoHeader extends React.Component {
             </TouchableWithoutFeedback>
           </View>
         </ImageBackground>
-         <Navbar />
-         </View>
+        <Navbar />
+      </View>
     )
   }
 

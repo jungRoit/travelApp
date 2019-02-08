@@ -5,8 +5,8 @@ import styles from './styles';
 
 import images from '../../config/images';
 
-import Navbar from '../../components/Navbar';
 import InfoHeader from '../../components/InfoHeader/InfoHeader';
+import Navbar from '../../components/Navbar';
 
 export default class InfoView extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -15,18 +15,20 @@ export default class InfoView extends React.Component {
       headerStyle: {
         backgroundColor: "transparent",
       },
-      headerTintColor: 'white',
-      headerBackground: (
-        <InfoHeader place={navigation.getParam('place')} />
-      )
+      headerTintColor: 'black',
+      // headerBackground: (
+        
+      // )
     }
   }
 
   render() {
     return (
+      
       <View style={styles.wrapper}>
-       
         <ScrollView style={styles.infoWrapper}>
+        <InfoHeader place={this.props.navigation.getParam('place')} />
+
           <View style={styles.infoBox}>
 
             <View style={styles.infoItem}>

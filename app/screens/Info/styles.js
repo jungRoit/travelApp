@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   wrapper: {
-    paddingTop: 150,
+    // paddingTop: 200,
   },
   infoWrapper: {
     flexGrow:1,
