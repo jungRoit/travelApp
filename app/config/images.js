@@ -8,6 +8,11 @@ const images = {
   menu: require('../assets/img/menu.png'),
   search: require('../assets/img/search.png'),
   roadhouse: require('../assets/img/roadhouse.jpg'),
+  location: require('../assets/img/location.png'),
+  contact: require('../assets/img/contact.png'),
+  openAt: require('../assets/img/openAt.png'),
+  website: require('../assets/img/website.png'),
+
 }
 
 export default images;

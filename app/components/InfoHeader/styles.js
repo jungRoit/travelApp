@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   backgroundImg: {
     width: '100%',
-    height: 300,
+    height: 250,
   },
   iconBox: {
     flex:1,

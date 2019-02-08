@@ -1,11 +1,7 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import React from 'react';
 
 import HomeView from '../screens/Home';
 import InfoView from '../screens/Info';
-
-import HomeHeader from '../components/HomeHeader';
-import InfoHeader from '../components/InfoHeader/InfoHeader';
 
 
 const Navigator = createStackNavigator({
@@ -15,7 +11,7 @@ const Navigator = createStackNavigator({
   },
   Info: {
     screen: InfoView,
-  }
+},
 },
   {
     initialRouteName: 'Home'
