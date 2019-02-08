@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text, ScrollView, Image, } from 'react-native';
 
-import InfoHeader from '../../components/InfoHeader/InfoHeader';
-
 import styles from './styles';
+
 import images from '../../config/images';
+
+import Navbar from '../../components/Navbar';
+import InfoHeader from '../../components/InfoHeader/InfoHeader';
 
 export default class InfoView extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -22,7 +24,8 @@ export default class InfoView extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.wrapper}>
+        <Navbar />
         <ScrollView style={styles.infoWrapper}>
           <View style={styles.infoBox}>
 

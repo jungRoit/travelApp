@@ -1,15 +1,17 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  wrapper: {
+    paddingTop: 150,
+  },
   infoWrapper: {
     flexGrow:1,
-    paddingTop: 200,
   },
   infoBox: {
     width: '100%',
     height:200,
-    paddingTop: 20,
-    paddingBottom: 20
+    paddingTop: 10,
+    paddingBottom: 10
   },
   infoItem: {
     width: '100%',
