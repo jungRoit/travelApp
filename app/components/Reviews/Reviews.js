@@ -11,7 +11,13 @@ export default class Reviews extends React.Component {
   render() {
     return (
       <View style={styles.wrapper}>
-        <Review />
+      <FlatList 
+      style={{height:300, paddingBottom: 20}} 
+      data= {this.props.place.reviews}
+      renderItem= {item =>   <Review place={item} />}
+      
+      />
+      
       </View>
     )
   }
