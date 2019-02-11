@@ -5,8 +5,6 @@ import styles from './styles';
 
 import images from '../../config/images';
 
-import Navbar from '../Navbar';
-
 
 
 export default class PlaceHeader extends React.Component {
@@ -19,7 +17,6 @@ export default class PlaceHeader extends React.Component {
 
   render() {
     return (
-      <View>
         <ImageBackground style={styles.backgroundImg} source={this.props.place.info.image}>
           <View style={styles.iconBox}>
             <Image style={styles.searchIcon} source={images.search} />
@@ -28,10 +25,9 @@ export default class PlaceHeader extends React.Component {
             </TouchableWithoutFeedback>
           </View>
           <View>
-            <Text style={styles.titleText}>Trisara</Text>
+            <Text style={styles.titleText}>Roadhouse Cafe</Text>
           </View>
         </ImageBackground>
-      </View>
     )
   }
 

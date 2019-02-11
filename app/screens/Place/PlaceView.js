@@ -20,13 +20,14 @@ export default class PlaceView extends React.Component {
   render() {
     return (
       <View>
+
         <PlaceHeader place={this.props.navigation.getParam('place')} />
         <Navbar selectedTab={this.toggleView} />
-        {(this.state.activeTab === 'Info') ? <Info place={this.props.navigation.getParam('place')} />
-          : (this.state.activeTab === 'Pictures') ? <Pictures />
-            : <Reviews />}
-
-
+        {(this.state.activeTab === 'Info')
+          ? <Info place={this.props.navigation.getParam('place')} />
+          : (this.state.activeTab === 'Pictures')
+            ? <Pictures place={this.props.navigation.getParam('place')} />
+            : <Reviews place={this.props.navigation.getParam('place')} />}
 
       </View>
     )
