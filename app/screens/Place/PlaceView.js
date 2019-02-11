@@ -1,14 +1,16 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import PlaceHeader from '../../components/PlaceHeader';
-import Navbar from '../../components/Navbar';
 import Info from '../../components/Info';
+import Navbar from '../../components/Navbar';
+import Pictures from '../../components/Pictures';
+import Reviews from '../../components/Reviews';
+import PlaceHeader from '../../components/PlaceHeader';
 
 
 
 export default class PlaceView extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       activeTab: 'Info'
@@ -20,16 +22,17 @@ export default class PlaceView extends React.Component {
       <View>
         <PlaceHeader place={this.props.navigation.getParam('place')} />
         <Navbar selectedTab={this.toggleView} />
+        {(this.state.activeTab === 'Info') ? <Info place={this.props.navigation.getParam('place')} />
+          : (this.state.activeTab === 'Pictures') ? <Pictures />
+            : <Reviews />}
 
-        <Info place={this.props.navigation.getParam('place')} />
-        <Pictures />
-        <Reviews />
+
 
       </View>
     )
   }
 
   toggleView = (activeTab) => {
-    this.setState({activeTab: activeTab });
+    this.setState({ activeTab: activeTab });
   }
 }

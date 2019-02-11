@@ -1,2 +1,2 @@
-import PictureView from './PictureView';
-export default PictureView;
+import Pictures from './Pictures';
+export default Pictures;
