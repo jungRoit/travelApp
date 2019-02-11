@@ -2,13 +2,13 @@ import React from 'react';
 import {View} from 'react-native';
 
 import styles from './styles';
-import NavbarItem from '../NvabarItem';
+import NavbarItem from '../NavbarItem';
 
 export default class Navbar extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      activeTab: 'Pictures'
+      activeTab: 'Info'
     }
   }
 
@@ -24,6 +24,7 @@ export default class Navbar extends React.Component {
   }
 
   selected = (text) => {
+    this.props.selectedTab(text);
     this.setState({ activeTab: text });
   }
 }

@@ -1,15 +1,15 @@
 import React from 'react';
-import { ImageBackground, View, Image, TouchableWithoutFeedback } from 'react-native';
+import { ImageBackground, View, Image, TouchableWithoutFeedback, Text } from 'react-native';
 
 import styles from './styles';
 
 import images from '../../config/images';
 
-import Navbar from '../../components/Navbar';
+import Navbar from '../Navbar';
 
 
 
-export default class InfoHeader extends React.Component {
+export default class PlaceHeader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,8 +27,10 @@ export default class InfoHeader extends React.Component {
               <Image style={styles.icon} source={this.state.isLoved ? images.heartActive : images.heart} />
             </TouchableWithoutFeedback>
           </View>
+          <View>
+            <Text style={styles.titleText}>Trisara</Text>
+          </View>
         </ImageBackground>
-        <Navbar />
       </View>
     )
   }

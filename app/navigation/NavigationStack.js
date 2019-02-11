@@ -1,17 +1,17 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import HomeView from '../screens/Home';
-import InfoView from '../screens/Info';
+import PlaceView from '../screens/Place';
 
 
 const Navigator = createStackNavigator({
   Home: {
     screen: HomeView,
-    
+
   },
-  Info: {
-    screen: InfoView,
-},
+  Place: {
+    screen: PlaceView
+}
 },
   {
     initialRouteName: 'Home'

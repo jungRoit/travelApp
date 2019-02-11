@@ -5,20 +5,14 @@ import styles from './styles';
 
 import images from '../../config/images';
 
-import InfoHeader from '../../components/InfoHeader/InfoHeader';
-import Navbar from '../../components/Navbar';
 
-export default class InfoView extends React.Component {
+export default class Info extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: 'Discover',
       headerStyle: {
         backgroundColor: "transparent",
       },
-      headerTintColor: 'black',
-      // headerBackground: (
-        
-      // )
     }
   }
 
@@ -27,7 +21,7 @@ export default class InfoView extends React.Component {
       
       <View style={styles.wrapper}>
         <ScrollView style={styles.infoWrapper}>
-        <InfoHeader place={this.props.navigation.getParam('place')} />
+       
 
           <View style={styles.infoBox}>
 
@@ -36,7 +30,7 @@ export default class InfoView extends React.Component {
                 <Image source={images.location} />
               </View>
               <View style={styles.iconContent}>
-                <Text>{this.props.navigation.getParam('place').info.location}</Text>
+                <Text>{this.props.place.info.location}</Text>
               </View>
             </View>
 
@@ -45,7 +39,7 @@ export default class InfoView extends React.Component {
                 <Image source={images.contact} />
               </View>
               <View style={styles.iconContent}>
-                <Text>Call {this.props.navigation.getParam('place').info.contact}</Text>
+                <Text>Call {this.props.place.info.contact}</Text>
               </View>
             </View>
 
@@ -54,7 +48,7 @@ export default class InfoView extends React.Component {
                 <Image source={images.openAt} />
               </View>
               <View style={styles.iconContent}>
-                <Text>Opens at: {this.props.navigation.getParam('place').info.openingTime}</Text>
+                <Text>Opens at: {this.props.place.info.openingTime}</Text>
               </View>
             </View>
 
@@ -63,14 +57,14 @@ export default class InfoView extends React.Component {
                 <Image source={images.website} />
               </View>
               <View style={styles.iconContent}>
-                <Text>{this.props.navigation.getParam('place').info.website}</Text>
+                <Text>{this.props.place.info.website}</Text>
               </View>
             </View>
 
 
           </View>
           <View style={styles.detailsBox}>
-            <Text style={styles.detailsText}>{this.props.navigation.getParam('place').info.details}</Text>
+            <Text style={styles.detailsText}>{this.props.place.info.details}</Text>
           </View>
         </ScrollView>
       </View>

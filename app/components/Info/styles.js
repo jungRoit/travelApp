@@ -31,9 +31,9 @@ const styles = StyleSheet.create({
   },
   detailsBox: {
     width: '100%',
-    height: 600,
+    height: 800,
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
   },
   detailsText: {
     fontSize: 15,

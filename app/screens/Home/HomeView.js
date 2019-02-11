@@ -95,7 +95,7 @@ export default class HomeView extends React.Component {
   }
 
   placePressed = (place) => {
-    this.props.navigation.navigate('Info', { place: place });
+    this.props.navigation.navigate('Place', { place: place });
   }
   fetchData = () => {
 

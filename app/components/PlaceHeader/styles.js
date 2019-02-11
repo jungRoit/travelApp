@@ -42,6 +42,12 @@ const styles = StyleSheet.create({
   active: {
     borderBottomWidth: 2,
     borderBottomColor: 'red'
+  },
+  titleText: {
+    color: 'white',
+    fontSize: 25,
+    paddingLeft: 20,
+    paddingBottom: 10
   }
 })
 export default styles;
