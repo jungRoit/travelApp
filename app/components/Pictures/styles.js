@@ -1,18 +1,26 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  list: {
+  wrapper: {
+    paddingTop: 10,
     height:300
+  },
+  list: {
+    flexGrow: 1,
+    paddingLeft: 10,
+    paddingRight: 10,
+
+
+  },
+  sectionTitle: {
+    paddingLeft:10,
   },
   image: {
     width: '50%',
     height: 130,
-    borderWidth: 5,
-    borderColor: 'white'
-    
-  },
-  imageBox: {
-
+    borderWidth: 2,
+    borderColor: 'white',
+    borderRadius:10
   }
 })
 

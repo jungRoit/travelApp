@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image, SectionList, FlatList } from 'react-native';
+import { View, Text, Image, SectionList, FlatList, ScrollView } from 'react-native';
+
 import styles from './styles';
 
 
@@ -7,15 +8,19 @@ export default class Pictures extends React.Component {
 
   render() {
     return (
-        <FlatList
-            data={this.props.place.pictures.images}
+      <ScrollView style={styles.wrapper}>
+      {this.props.place.pictures.map((object =>
+        <View>
+          <Text style={styles.sectionTitle}>{object.date}</Text>
+          <FlatList
+            style={styles.list}
             numColumns={2}
-            renderItem={({ item }) =><Image style={styles.image} source={item} />}
-            // renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
-            keyExtractor={(item, index) => index}
+            data={object.images}
+            renderItem={({ item }) => <Image style={styles.image} source={item} />}
           />
-      
-     
+        </View>
+      ))}
+      </ScrollView>
     )
   }
 } 
