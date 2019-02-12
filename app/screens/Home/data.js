@@ -43,6 +43,7 @@
     },
     reviews: [
       {
+        key:'1',
         name: 'William Scout',
         rating: '★★★★',
         comment: `Awesone experience it's such a beautiful to be in Boudha at evening time. Food place hospitality all are good here.`,
@@ -50,6 +51,7 @@
         addedDate: new Date('February 11, 2019 03:24:00')
       },
       {
+        key:'2',
         name: 'Anonymous',
         rating: '★★',
         comment: `Thumbs up. it's a wonderful place to enjoy .`,
@@ -57,6 +59,7 @@
         addedDate: new Date('February 10, 2019 05:04:00')
       },
       {
+        key:'3',
         name: 'Jessy Jane',
         rating: '★★★★★',
         comment: `Awesone experience it's such a beautiful to be in lazimpad at evening time. Food place hospitality all are good here.`,
@@ -64,6 +67,7 @@
         addedDate: new Date('February 01, 2019 01:21:00')
       },
       {
+        key:'4',
         name: 'Jane Doe',
         rating: '★★★',
         comment: `But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure`,

@@ -8,7 +8,6 @@ import PlaceHeader from '../components/PlaceHeader';
 const Navigator = createStackNavigator({
   Home: {
     screen: HomeView,
-
   },
   Place: {
     screen: PlaceView

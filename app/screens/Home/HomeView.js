@@ -2,9 +2,12 @@ import React from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
 
 import Places from '../../components/Places/Places';
-import HomeHeader from '../../components/HomeHeader';
 
 import data from './data';
+
+import images from '../../config/images';
+
+import styles from './styles';
 
 
 
@@ -17,9 +20,16 @@ export default class HomeView extends React.Component {
   }
 
   static navigationOptions = {
-    header: props => <HomeHeader {...props} />,
+    title: 'Discover',
+    headerLeft: <Image source={images.menu} style={styles.headerLeft} />,
     headerStyle: {
-      backgroundColor: "transparent"
+      backgroundColor: "#E07E5B",
+    },
+    headerRight: <Image source={images.search} style={styles.headerRight} />,
+    headerTitleStyle: {
+      color: 'white',
+      textAlign: 'center',
+      flex: 1,
     }
   }
 

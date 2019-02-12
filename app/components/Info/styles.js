@@ -1,21 +1,20 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  wrapper: {
-    // paddingTop: 200,
-  },
+
   infoWrapper: {
     flexGrow:1,
+    height: 300
   },
   infoBox: {
     width: '100%',
-    height:200,
+    height: 200,
     paddingTop: 10,
     paddingBottom: 10
   },
   infoItem: {
-    width: '100%',
     height: 40,
+    width: '100%',
     flexDirection: 'row'
   },
   iconBox: {
@@ -30,10 +29,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start'
   },
   detailsBox: {
+    height: 200,
     width: '100%',
-    height: 800,
     paddingLeft: 10,
     paddingRight: 10,
+
   },
   detailsText: {
     fontSize: 15,

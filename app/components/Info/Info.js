@@ -18,10 +18,8 @@ export default class Info extends React.Component {
 
   render() {
     return (
-      
-      <View style={styles.wrapper}>
+
         <ScrollView style={styles.infoWrapper}>
-       
 
           <View style={styles.infoBox}>
 
@@ -33,7 +31,6 @@ export default class Info extends React.Component {
                 <Text>{this.props.place.info.location}</Text>
               </View>
             </View>
-
             <View style={styles.infoItem}>
               <View style={styles.iconBox}>
                 <Image source={images.contact} />
@@ -42,7 +39,6 @@ export default class Info extends React.Component {
                 <Text>Call {this.props.place.info.contact}</Text>
               </View>
             </View>
-
             <View style={styles.infoItem}>
               <View style={styles.iconBox}>
                 <Image source={images.openAt} />
@@ -51,7 +47,6 @@ export default class Info extends React.Component {
                 <Text>Opens at: {this.props.place.info.openingTime}</Text>
               </View>
             </View>
-
             <View style={styles.infoItem}>
               <View style={styles.iconBox}>
                 <Image source={images.website} />
@@ -61,13 +56,13 @@ export default class Info extends React.Component {
               </View>
             </View>
 
-
           </View>
+
           <View style={styles.detailsBox}>
             <Text style={styles.detailsText}>{this.props.place.info.details}</Text>
           </View>
         </ScrollView>
-      </View>
+
     )
   }
 }

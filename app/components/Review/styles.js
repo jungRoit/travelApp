@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   reviewBox: {
     width: '100%',
-    height: 150,
     flexDirection: 'row',
-    paddingRight: 10
+    paddingRight: 10,
+    paddingBottom: 20
   },
   imageBox: {
     flex: 1,
