@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, ImageBackground, TouchableWithoutFeedback } from 'react-native';
+
 import styles from './styles';
-import heartPic from '../../assets/img/heart.png';
-import heartActivePic from '../../assets/img/heart-active.png';
+
+import images from '../../config/images';
 
 export default class Places extends React.Component {
   constructor(props) {
@@ -10,6 +11,37 @@ export default class Places extends React.Component {
     this.state = {
       isLoved: false
     }
+  }
+
+  render() {
+    return (
+      <TouchableWithoutFeedback
+        onPress={() => this.pressed()}
+      >
+        <View style={{ borderBottomWidth: 2, borderColor: 'white' }}>
+          <ImageBackground
+            source={this.props.place.image}
+            style={styles.backgroundImage}>
+            <TouchableWithoutFeedback onPress={this.toggleHeart}>
+              <ImageBackground
+                source={(this.state.isLoved) ? images.heartActive : images.heart}
+                style={styles.heartBox} />
+            </TouchableWithoutFeedback>
+            <View style={styles.contentBox}>
+              <View style={styles.numberBox}>
+                <Text style={styles.number}>{this.props.place.numberOfThings}</Text>
+              </View>
+              <View style={styles.textBox}>
+                <Text style={styles.subText}>Things to do in</Text>
+                <Text style={styles.placeTitle}>{this.props.place.title}</Text>
+              </View>
+
+            </View>
+          </ImageBackground>
+        </View>
+      </TouchableWithoutFeedback>
+
+    )
   }
 
   toggleHeart = () => {
@@ -20,34 +52,4 @@ export default class Places extends React.Component {
     this.props.onPress(this.props.place);
   }
 
-  render() {
-    return (
-      <TouchableWithoutFeedback
-      onPress= {() =>this.pressed()}
-    >
-      <View style={{ borderBottomWidth: 2, borderColor: 'white' }}>
-          <ImageBackground
-            source={this.props.image}
-            style={styles.backgroundImage}>
-            <TouchableWithoutFeedback onPress={this.toggleHeart}>
-              <ImageBackground
-                source={(this.state.isLoved) ? heartActivePic : heartPic}
-                style={styles.heartBox} />
-            </TouchableWithoutFeedback>
-            <View style={styles.contentBox}>
-              <View style={styles.numberBox}>
-                <Text style={styles.number}>{this.props.numberOfThings}</Text>
-              </View>
-              <View style={styles.textBox}>
-                <Text style={styles.subText}>Things to do in</Text>
-                <Text style={styles.placeTitle}>{this.props.place}</Text>
-              </View>
-
-            </View>
-          </ImageBackground>
-      </View>
-      </TouchableWithoutFeedback>
-
-    )
-  }
 }
