@@ -9,6 +9,8 @@ import images from '../../config/images';
 
 import styles from './styles';
 
+import {Icon} from 'react-native-elements';
+
 
 
 export default class HomeView extends React.Component {
@@ -21,11 +23,11 @@ export default class HomeView extends React.Component {
 
   static navigationOptions = {
     title: 'Discover',
-    headerLeft: <Image source={images.menu} style={styles.headerLeft} />,
+    headerLeft: <Icon name='list' size={30} color= 'white'  containerStyle={styles.headerLeft} />,
     headerStyle: {
       backgroundColor: "#E07E5B"
     },
-    headerRight: <Image source={images.search} style={styles.headerRight} />,
+    headerRight: <Icon name='search' size={30} color= 'white' containerStyle={styles.headerRight} />,
     headerTitleStyle: {
       color: 'white',
       textAlign: 'center',
