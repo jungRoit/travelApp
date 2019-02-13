@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   reviewBox: {
+    flex:1,
     width: '100%',
     flexDirection: 'row',
     paddingRight: 10,
