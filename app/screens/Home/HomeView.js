@@ -1,76 +1,57 @@
 import React from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
+
+import Places from '../../components/Places/Places';
+
+import data from './data';
+
+import images from '../../config/images';
+
 import styles from './styles';
-import menuPic from '../../assets/img/menu.png';
-import searchPic from '../../assets/img/search.png';
-import Places from '../../components/places/Places';
-import boudha from '../../assets/img/boudha.jpeg';
-import patan from '../../assets/img/patan.jpeg';
-import basantapur from '../../assets/img/basantapur.jpeg';
-import chitwan from '../../assets/img/chitwan.jpeg';
+
+
 
 export default class HomeView extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      places: data || this.fetchData()
+    }
+  }
 
-  placePressed = (place) => {
-    this.props.navigation.navigate('Info', {place: place});
+  static navigationOptions = {
+    title: 'Discover',
+    headerLeft: <Image source={images.menu} style={styles.headerLeft} />,
+    headerStyle: {
+      backgroundColor: "#E07E5B",
+    },
+    headerRight: <Image source={images.search} style={styles.headerRight} />,
+    headerTitleStyle: {
+      color: 'white',
+      textAlign: 'center',
+      flex: 1,
+    }
   }
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <View style={styles.header}>
-
-          <View style={styles.menuBox}>
-            <Image style={styles.menuIcon} source={menuPic} />
-          </View>
-
-          <View style={styles.titleBox}>
-            <Text style={styles.title}>Discover</Text>
-          </View>
-
-          <View style={styles.searchBox}>
-            <Image style={styles.menuIcon} source={searchPic} />
-          </View>
-
-        </View>
-        <View style={{flex:6}}>
-          <FlatList
-            data= {[
-              {
-                key:'1',
-                nunberOfThings:10,
-                place:'Boudha',
-                image: boudha
-              },
-              {
-                key:'2',
-                nunberOfThings:21,
-                place:'Chitwan',
-                image: chitwan
-              },
-              {
-                key:'3',
-                nunberOfThings:13,
-                place:'Patan',
-                image: patan
-              },
-              {
-                key:'4',
-                nunberOfThings:8,
-                place:'Basantapur',
-                image: basantapur
-              }
-            ]}
-            renderItem = {({item}) => <Places 
-              numberOfThings={item.nunberOfThings} 
-              place={item.place}
-              image={item.image}
-              onPress = {this.placePressed}
-              />}
-          />
-        </View>
-       
+      <View>
+        <FlatList
+          data={this.state.places}
+          renderItem={({ item }) => <Places
+            place={item}
+            onPress={this.placePressed}
+          />}
+        />
       </View>
     )
   }
+
+  placePressed = (place) => {
+    this.props.navigation.navigate('Place', { place: place });
+  }
+  fetchData = () => {
+
+  }
+
 }
