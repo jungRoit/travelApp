@@ -1,11 +1,9 @@
 import React from 'react';
-import { View, Text, Image, FlatList } from 'react-native';
+import { View, FlatList, TouchableOpacity } from 'react-native';
 
 import Places from '../../components/Places/Places';
 
 import data from './data';
-
-import images from '../../config/images';
 
 import styles from './styles';
 
@@ -21,19 +19,25 @@ export default class HomeView extends React.Component {
     }
   }
 
-  static navigationOptions = {
+  static navigationOptions = ({navigation}) => ({
     title: 'Discover',
-    headerLeft: <Icon name='list' size={30} color= 'white'  containerStyle={styles.headerLeft} />,
+    headerLeft: (
+      <TouchableOpacity onPress={() =>navigation.toggleDrawer()}>
+      <Icon name='list' size={30} color= 'white'  containerStyle={styles.headerLeft} />
+      </TouchableOpacity>
+    ),
     headerStyle: {
       backgroundColor: "#E07E5B"
     },
-    headerRight: <Icon name='search' size={30} color= 'white' containerStyle={styles.headerRight} />,
+    headerRight: (
+      <Icon name='search' size={30} color= 'white' containerStyle={styles.headerRight} />
+    ),
     headerTitleStyle: {
       color: 'white',
       textAlign: 'center',
       flex: 1,
     }
-  }
+  })
 
   render() {
     return (

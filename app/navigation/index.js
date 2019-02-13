@@ -1,2 +1,2 @@
-import AppNavigator from './TabNavigator';
+import AppNavigator from './DrawerNavigator';
 export default AppNavigator;
