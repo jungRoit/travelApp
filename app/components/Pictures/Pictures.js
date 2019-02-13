@@ -9,7 +9,7 @@ export default class Pictures extends React.Component {
   render() {
     return (
       <ScrollView style={styles.wrapper}>
-      {this.props.place.pictures.map((object =>
+      {this.props.place.map((object =>
         <View>
           <Text style={styles.sectionTitle}>{object.date}</Text>
           <FlatList
