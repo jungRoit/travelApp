@@ -16,15 +16,15 @@ export default class Navbar extends React.Component {
     
     return (
       <View style={styles.navbar}>
-        <NavbarItem selected={this.selected} text='Info' active={this.state.activeTab} />
-        <NavbarItem selected={this.selected} text='Pictures' active={this.state.activeTab} />
-        <NavbarItem selected={this.selected} text='Reviews' active={this.state.activeTab} />
+      {this.props.list.map(item => 
+        <NavbarItem onPress={this.navIconPressed} text={item} active={this.state.activeTab} />
+        )}
     </View>
     )
   }
 
-  selected = (text) => {
-    this.props.selectedTab(text);
+  navIconPressed = (text) => {
+    this.props.onPress(text);
     this.setState({ activeTab: text });
   }
 }

@@ -23,7 +23,7 @@ export default class HomeView extends React.Component {
     title: 'Discover',
     headerLeft: <Image source={images.menu} style={styles.headerLeft} />,
     headerStyle: {
-      backgroundColor: "#E07E5B",
+      backgroundColor: "#E07E5B"
     },
     headerRight: <Image source={images.search} style={styles.headerRight} />,
     headerTitleStyle: {

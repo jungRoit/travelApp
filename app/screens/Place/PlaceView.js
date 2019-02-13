@@ -28,18 +28,18 @@ export default class PlaceView extends React.Component {
   
 
   render() {
-    const view = this.getView(this.state.activeTab);
+    const view = this.getActiveTabView(this.state.activeTab);
     return (
       <View>
         <PlaceHeader place={this.props.navigation.getParam('place',{})} />
-        <Navbar selectedTab={this.toggleView} list= {[1,2,3]} />
+        <Navbar onPress={this.toggleView} list= {['Info','Pictures','Reviews']} />
         {view}
 
       </View>
     )
   }
 
-  getView = (activeTab)  => {
+  getActiveTabView = (activeTab)  => {
     const data=this.state.place;
 
     if(activeTab === 'Info') {
