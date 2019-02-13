@@ -13,25 +13,47 @@ export default class PlaceView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: 'Info'
+      activeTab: 'Info',
+      place: {}
     }
+  }
+
+  componentWillMount() {
+    const {navigation } = this.props;
+
+    const place = navigation.getParam('place',{});
+    this.setState({place});
   }
 
   
 
   render() {
+    const view = this.getView(this.state.activeTab);
     return (
       <View>
-        <PlaceHeader place={this.props.navigation.getParam('place')} />
-        <Navbar selectedTab={this.toggleView} />
-        {(this.state.activeTab === 'Info')
-          ? <Info place={this.props.navigation.getParam('place')} />
-          : (this.state.activeTab === 'Pictures')
-            ? <Pictures place={this.props.navigation.getParam('place')} />
-            : <Reviews place={this.props.navigation.getParam('place')} />}
+        <PlaceHeader place={this.props.navigation.getParam('place',{})} />
+        <Navbar selectedTab={this.toggleView} list= {[1,2,3]} />
+        {view}
 
       </View>
     )
+  }
+
+  getView = (activeTab)  => {
+    const data=this.state.place;
+
+    if(activeTab === 'Info') {
+      return <Info place={data.info} />
+
+    } else if(activeTab==='Pictures') {
+      return <Pictures place={data.pictures} />
+
+    } else if(activeTab==='Reviews'){
+      return <Reviews place={data.reviews} />
+
+    } else {
+      return null;
+    }
   }
 
   toggleView = (activeTab) => {

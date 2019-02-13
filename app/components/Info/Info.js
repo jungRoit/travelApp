@@ -28,7 +28,7 @@ export default class Info extends React.Component {
                 <Image source={images.location} />
               </View>
               <View style={styles.iconContent}>
-                <Text>{this.props.place.info.location}</Text>
+                <Text>{this.props.place.location}</Text>
               </View>
             </View>
             <View style={styles.infoItem}>
@@ -36,7 +36,7 @@ export default class Info extends React.Component {
                 <Image source={images.contact} />
               </View>
               <View style={styles.iconContent}>
-                <Text>Call {this.props.place.info.contact}</Text>
+                <Text>Call {this.props.place.contact}</Text>
               </View>
             </View>
             <View style={styles.infoItem}>
@@ -44,7 +44,7 @@ export default class Info extends React.Component {
                 <Image source={images.openAt} />
               </View>
               <View style={styles.iconContent}>
-                <Text>Opens at: {this.props.place.info.openingTime}</Text>
+                <Text>Opens at: {this.props.place.openingTime}</Text>
               </View>
             </View>
             <View style={styles.infoItem}>
@@ -52,14 +52,14 @@ export default class Info extends React.Component {
                 <Image source={images.website} />
               </View>
               <View style={styles.iconContent}>
-                <Text>{this.props.place.info.website}</Text>
+                <Text>{this.props.place.website}</Text>
               </View>
             </View>
 
           </View>
 
           <View style={styles.detailsBox}>
-            <Text style={styles.detailsText}>{this.props.place.info.details}</Text>
+            <Text style={styles.detailsText}>{this.props.place.details}</Text>
           </View>
         </ScrollView>
 
