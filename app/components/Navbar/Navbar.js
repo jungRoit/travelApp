@@ -16,8 +16,8 @@ export default class Navbar extends React.Component {
     
     return (
       <View style={styles.navbar}>
-      {this.props.list.map(item => 
-        <NavbarItem onPress={this.navIconPressed} text={item} active={this.state.activeTab} />
+      {this.props.list.map((item,index) => 
+        <NavbarItem key={index} onPress={this.navIconPressed} text={item} active={this.state.activeTab} />
         )}
     </View>
     )
