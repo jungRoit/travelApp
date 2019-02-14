@@ -13,8 +13,13 @@ export default class HomeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      places: data || this.fetchData()
+      places: {}
     };
+  }
+
+  componentDidMount() {
+    const places = data || this.fetchData();
+    this.setState({ places });
   }
 
   static navigationOptions = ({ navigation }) => ({
