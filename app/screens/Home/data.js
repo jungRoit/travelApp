@@ -16,12 +16,14 @@ const data = [
     },
     pictures: [
       {
+        key:'1',
         date: 'Saturday-9th February',
-        images: [images.roadhouse1, images.roadhouse2, images.roadhouse3]
+        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       },
       {
+        key:'2',
         date: 'Friday-8th February',
-        images: [images.roadhouse5, images.roadhouse6, images.roadhouse4]
+        data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
     ],
     reviews: [
@@ -74,12 +76,14 @@ const data = [
     },
     pictures: [
       {
+        key:'1',
         date: 'Saturday-9th February',
-        images: [images.roadhouse1, images.roadhouse2, images.roadhouse3]
+        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       },
       {
+        key:'2',
         date: 'Friday-8th February',
-        images: [images.roadhouse5, images.roadhouse6, images.roadhouse4]
+        data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
     ],
     reviews: [
@@ -132,12 +136,14 @@ const data = [
     },
     pictures: [
       {
+        key:'1',
         date: 'Saturday-9th February',
-        images: [images.roadhouse1, images.roadhouse2, images.roadhouse3]
+        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       },
       {
+        key:'2',
         date: 'Friday-8th February',
-        images: [images.roadhouse5, images.roadhouse6, images.roadhouse4]
+        data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
     ],
     reviews: [
@@ -190,12 +196,14 @@ const data = [
     },
     pictures: [
       {
+        key:'1',
         date: 'Saturday-9th February',
-        images: [images.roadhouse1, images.roadhouse2, images.roadhouse3]
+        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       },
       {
+        key:'2',
         date: 'Friday-8th February',
-        images: [images.roadhouse5, images.roadhouse6, images.roadhouse4]
+        data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
     ],
     reviews: [

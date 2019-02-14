@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
 
   infoWrapper: {
     flexGrow:1,
-    height: 300
+    height: 260
   },
   infoBox: {
     width: '100%',
