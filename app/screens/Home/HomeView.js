@@ -7,57 +7,61 @@ import data from './data';
 
 import styles from './styles';
 
-import {Icon} from 'react-native-elements';
-
-
+import { Icon } from 'react-native-elements';
 
 export default class HomeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       places: data || this.fetchData()
-    }
+    };
   }
 
-  static navigationOptions = ({navigation}) => ({
+  static navigationOptions = ({ navigation }) => ({
     title: 'Discover',
     headerLeft: (
-      <TouchableOpacity onPress={() =>navigation.toggleDrawer()}>
-      <Icon name='list' size={30} color= 'white'  containerStyle={styles.headerLeft} />
+      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+        <Icon
+          name="list"
+          size={30}
+          color="white"
+          containerStyle={styles.headerLeft}
+        />
       </TouchableOpacity>
     ),
     headerStyle: {
-      backgroundColor: "#E07E5B"
+      backgroundColor: '#E07E5B'
     },
     headerRight: (
-      <Icon name='search' size={30} color= 'white' containerStyle={styles.headerRight} />
+      <Icon
+        name="search"
+        size={30}
+        color="white"
+        containerStyle={styles.headerRight}
+      />
     ),
     headerTitleStyle: {
       color: 'white',
       textAlign: 'center',
-      flex: 1,
+      flex: 1
     }
-  })
+  });
 
   render() {
     return (
       <View>
         <FlatList
           data={this.state.places}
-          renderItem={({ item }) => <Places
-            place={item}
-            onPress={this.placePressed}
-          />}
+          renderItem={({ item }) => (
+            <Places place={item} onPress={this.placePressed} />
+          )}
         />
       </View>
-    )
+    );
   }
 
-  placePressed = (place) => {
+  placePressed = place => {
     this.props.navigation.navigate('Place', { place: place });
-  }
-  fetchData = () => {
-
-  }
-
+  };
+  fetchData = () => {};
 }

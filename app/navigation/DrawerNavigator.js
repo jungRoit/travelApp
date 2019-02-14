@@ -1,4 +1,4 @@
-import {createDrawerNavigator, createAppContainer} from 'react-navigation';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
 import TabNavigator from './TabNavigator';
 import ProfileView from '../screens/Profile';
@@ -23,8 +23,7 @@ const DrawerNavigator = createDrawerNavigator({
       drawerLabel: 'My Favorites'
     }
   }
-
-})
+});
 
 const AppNavigator = createAppContainer(DrawerNavigator);
 

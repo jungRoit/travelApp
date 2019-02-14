@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   list: {
-    height:260,
-    paddingLeft:7,
+    height: 260,
+    paddingLeft: 7,
     paddingRight: 7
   },
   image: {
@@ -11,12 +11,9 @@ const styles = StyleSheet.create({
     height: 130,
     borderWidth: 2,
     borderColor: 'white',
-    borderRadius:10
-    
+    borderRadius: 10
   },
-  imageBox: {
-
-  }
-})
+  imageBox: {}
+});
 
 export default styles;

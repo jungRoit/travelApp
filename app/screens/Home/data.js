@@ -16,12 +16,21 @@ const data = [
     },
     pictures: [
       {
-        key:'1',
+        key: '1',
         date: 'Saturday-9th February',
-        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
+        data: [
+          [
+            images.roadhouse1,
+            images.roadhouse2,
+            images.roadhouse3,
+            images.roadhouse5,
+            images.roadhouse6,
+            images.roadhouse4
+          ]
+        ]
       },
       {
-        key:'2',
+        key: '2',
         date: 'Friday-8th February',
         data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
@@ -76,12 +85,21 @@ const data = [
     },
     pictures: [
       {
-        key:'1',
+        key: '1',
         date: 'Saturday-9th February',
-        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
+        data: [
+          [
+            images.roadhouse1,
+            images.roadhouse2,
+            images.roadhouse3,
+            images.roadhouse5,
+            images.roadhouse6,
+            images.roadhouse4
+          ]
+        ]
       },
       {
-        key:'2',
+        key: '2',
         date: 'Friday-8th February',
         data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
@@ -136,12 +154,21 @@ const data = [
     },
     pictures: [
       {
-        key:'1',
+        key: '1',
         date: 'Saturday-9th February',
-        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
+        data: [
+          [
+            images.roadhouse1,
+            images.roadhouse2,
+            images.roadhouse3,
+            images.roadhouse5,
+            images.roadhouse6,
+            images.roadhouse4
+          ]
+        ]
       },
       {
-        key:'2',
+        key: '2',
         date: 'Friday-8th February',
         data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
@@ -179,7 +206,7 @@ const data = [
         proPic: images.profilePic2,
         addedDate: new Date('January 11, 2019 03:24:00')
       }
-    ],
+    ]
   },
   {
     key: '4',
@@ -196,12 +223,21 @@ const data = [
     },
     pictures: [
       {
-        key:'1',
+        key: '1',
         date: 'Saturday-9th February',
-        data: [[images.roadhouse1, images.roadhouse2, images.roadhouse3, images.roadhouse5, images.roadhouse6, images.roadhouse4]]
+        data: [
+          [
+            images.roadhouse1,
+            images.roadhouse2,
+            images.roadhouse3,
+            images.roadhouse5,
+            images.roadhouse6,
+            images.roadhouse4
+          ]
+        ]
       },
       {
-        key:'2',
+        key: '2',
         date: 'Friday-8th February',
         data: [[images.roadhouse5, images.roadhouse6, images.roadhouse4]]
       }
@@ -241,6 +277,6 @@ const data = [
       }
     ]
   }
-]
+];
 
 export default data;

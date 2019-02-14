@@ -1,25 +1,25 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   backgroundImg: {
     width: '100%',
-    height: 200,
+    height: 200
   },
   iconBox: {
-    flex:1,
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    marginTop: 20,
+    marginTop: 20
   },
   icon: {
     width: 30,
     height: 30,
-    marginRight: 15,
+    marginRight: 15
   },
   searchIcon: {
     width: 23,
     height: 23,
-    marginRight: 15,
+    marginRight: 15
   },
   navbar: {
     height: 40,
@@ -49,5 +49,5 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingBottom: 10
   }
-})
+});
 export default styles;

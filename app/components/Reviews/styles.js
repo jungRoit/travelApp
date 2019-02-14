@@ -1,9 +1,9 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   wrapper: {
     paddingTop: 20,
-    height:220, 
+    height: 220,
     paddingBottom: 20
   }
 });
