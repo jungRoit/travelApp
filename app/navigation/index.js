@@ -1,2 +1,2 @@
-import Navigator from './NavigationStack';
-export default Navigator;
+import AppNavigator from './DrawerNavigator';
+export default AppNavigator;

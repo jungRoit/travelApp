@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   reviewBox: {
@@ -9,30 +9,30 @@ const styles = StyleSheet.create({
   },
   imageBox: {
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'center'
   },
   image: {
     height: 80,
     width: 80,
-    borderRadius: 40,
+    borderRadius: 40
   },
   contentBox: {
-    flex: 3,
+    flex: 3
   },
   reviewerDetails: {
-    flex:2,
+    flex: 2
   },
   reviewerName: {
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
   rating: {
-    color: 'gold',
+    color: 'gold'
   },
   reviewText: {
-    flex:5,
+    flex: 5
   },
   timeText: {
-    color: '#aea0a0',
+    color: '#aea0a0'
   }
 });
 

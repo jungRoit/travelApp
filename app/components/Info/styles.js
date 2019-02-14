@@ -1,10 +1,9 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-
   infoWrapper: {
-    flexGrow:1,
-    height: 300
+    flexGrow: 1,
+    height: 260
   },
   infoBox: {
     width: '100%',
@@ -18,7 +17,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   iconBox: {
-    flex:1,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -32,12 +31,11 @@ const styles = StyleSheet.create({
     height: 200,
     width: '100%',
     paddingLeft: 10,
-    paddingRight: 10,
-
+    paddingRight: 10
   },
   detailsText: {
     fontSize: 15,
     textAlign: 'justify'
   }
-})
+});
 export default styles;

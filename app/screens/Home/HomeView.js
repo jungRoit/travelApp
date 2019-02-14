@@ -1,57 +1,67 @@
 import React from 'react';
-import { View, Text, Image, FlatList } from 'react-native';
+import { View, FlatList, TouchableOpacity } from 'react-native';
 
 import Places from '../../components/Places/Places';
 
 import data from './data';
 
-import images from '../../config/images';
-
 import styles from './styles';
 
-
+import { Icon } from 'react-native-elements';
 
 export default class HomeView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       places: data || this.fetchData()
-    }
+    };
   }
 
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) => ({
     title: 'Discover',
-    headerLeft: <Image source={images.menu} style={styles.headerLeft} />,
+    headerLeft: (
+      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+        <Icon
+          name="list"
+          size={30}
+          color="white"
+          containerStyle={styles.headerLeft}
+        />
+      </TouchableOpacity>
+    ),
     headerStyle: {
-      backgroundColor: "#E07E5B",
+      backgroundColor: '#E07E5B'
     },
-    headerRight: <Image source={images.search} style={styles.headerRight} />,
+    headerRight: (
+      <Icon
+        name="search"
+        size={30}
+        color="white"
+        containerStyle={styles.headerRight}
+      />
+    ),
     headerTitleStyle: {
       color: 'white',
       textAlign: 'center',
-      flex: 1,
+      flex: 1
     }
-  }
+  });
 
   render() {
     return (
       <View>
         <FlatList
           data={this.state.places}
-          renderItem={({ item }) => <Places
-            place={item}
-            onPress={this.placePressed}
-          />}
+          renderItem={({ item }) => (
+            <Places place={item} onPress={this.placePressed} />
+          )}
         />
       </View>
-    )
+    );
   }
 
-  placePressed = (place) => {
+  placePressed = place => {
     this.props.navigation.navigate('Place', { place: place });
-  }
-  fetchData = () => {
-
-  }
-
+  };
+  fetchData = () => {};
 }

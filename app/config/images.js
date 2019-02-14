@@ -26,9 +26,7 @@ const images = {
   profilePic1: require('../assets/img/profilePic1.jpeg'),
   profilePic2: require('../assets/img/profilePic2.jpeg'),
   profilePic3: require('../assets/img/profilePic3.jpeg'),
-  profilePic4: require('../assets/img/profilePic4.jpeg'),
-  
-
-}
+  profilePic4: require('../assets/img/profilePic4.jpeg')
+};
 
 export default images;
